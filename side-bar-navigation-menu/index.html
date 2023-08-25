@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="bak"></div>
+    <header>
+      <div class="nav-bar">
+        <ul>
+          <li><a id="h" href="#">home</a></li>
+          <li><a href="#">about</a></li>
+          <li><a href="#">players</a></li>
+          <li><a href="#">images</a></li>
+          <li><a href="#">records</a></li>
+        </ul>
+      </div>
+      <button class="menu">
+        <div class="bar bar1"></div>
+        <div class="bar bar2"></div>
+        <div class="bar bar3"></div>
+      </button>
+    </header>
+    <script>
+      let nav = document.querySelector(".nav-bar");
+      let menu = document.querySelector(".menu");
+      let bar = Array.from(menu.children);
+
+      menu.onclick = () => {
+        menu.classList.toggle("active");
+        nav.classList.toggle("active");
+        bar.forEach((item) => {
+          item.classList.toggle("active");
+        });
+      };
+    </script>
+  </body>
+</html>
